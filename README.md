@@ -130,7 +130,7 @@ Log Viewer has `Scroll lock` button. It is off by default. You can turn it "Lock
 
 with "Scroll Locked"
 
-- tree-view :  min  sec
+- tree-view : 4 min 26 sec
 - table-view "All":  min  sec
 - table-view "INFO" only:  min  sec
 
@@ -138,7 +138,7 @@ with "Scroll Locked"
 
 with "Scroll Locked"
 
-- tree-view :  min  sec
+- tree-view : 1 min 40 sec
 - table-view "All":  min  sec
 - table-view "INFO" only:  min  sec
 
@@ -146,9 +146,9 @@ with "Scroll Locked"
 
 with "Scroll Locked"
 
-- tree-view :  min  sec
+- tree-view : 0 min 22 sec
 - table-view "All":  min  sec
-- table-view "INFO" only:  min  sec
+- table-view "INFO" only: 0 min 21 sec
 
 ## Conclusion
 
