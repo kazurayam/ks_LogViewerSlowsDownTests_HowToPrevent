@@ -1,5 +1,5 @@
 {
-  "keywordFileContentHash": "EF2749D114079A2AEBBED3CDDBC104A9",
+  "keywordFileContentHash": "6530C7D4DCC9D9B089CCCEC2DDCE4293",
   "keywordClasses": [
     {
       "name": "my.Verifier",
@@ -8,40 +8,36 @@
           "name": "printID",
           "parameters": [
             {
-              "name": "id",
+              "name": "data",
               "initialExpression": "",
               "type": {
-                "fullClassName": "java.lang.String",
-                "unresolvedClassName": "String",
+                "fullClassName": "com.kms.katalon.core.testdata.TestData",
+                "unresolvedClassName": "TestData",
                 "isArray": false,
                 "isGnericsPlaceHolder": false,
                 "hasImmutableClassName": false,
                 "genericsTypes": [],
                 "errorOnParsing": false
               }
-            }
-          ]
-        },
-        {
-          "name": "verifySomething",
-          "parameters": [
+            },
             {
-              "name": "id",
+              "name": "i",
               "initialExpression": "",
               "type": {
-                "fullClassName": "java.lang.String",
-                "unresolvedClassName": "String",
+                "fullClassName": "int",
+                "unresolvedClassName": "int",
                 "isArray": false,
                 "isGnericsPlaceHolder": false,
-                "hasImmutableClassName": false,
+                "hasImmutableClassName": true,
                 "genericsTypes": [],
                 "errorOnParsing": false
               }
             }
-          ]
+          ],
+          "javadoc": ""
         }
       ]
     }
   ],
-  "javadocParsed": false
+  "javadocParsed": true
 }

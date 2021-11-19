@@ -32,16 +32,4 @@
          <variableId>342bf1c4-85fb-4aba-a2d1-af4e28f5704e</variableId>
       </variableLink>
    </testCaseLink>
-   <testCaseLink>
-      <guid>6438e17c-58e3-4f0c-9060-185421f854df</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/verifySomething</testCaseId>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>5775f4d0-7b47-4966-aa90-f035965df793</variableId>
-      </variableLink>
-   </testCaseLink>
 </TestSuiteEntity>
