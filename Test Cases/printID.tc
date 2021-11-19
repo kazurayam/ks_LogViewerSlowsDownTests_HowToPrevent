@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>printID</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>07ba604c-70ee-4cc8-a2ef-97f9d42265df</testCaseGuid>
+   <variable>
+      <defaultValue>'foo'</defaultValue>
+      <description></description>
+      <id>342bf1c4-85fb-4aba-a2d1-af4e28f5704e</id>
+      <masked>false</masked>
+      <name>ID</name>
+   </variable>
+</TestCaseEntity>
