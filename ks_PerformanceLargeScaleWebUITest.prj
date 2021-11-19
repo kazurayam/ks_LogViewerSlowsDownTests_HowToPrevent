@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
    <description></description>
-   <name>ks_PerformanceLargeScaleWebUITest</name>
+   <name>ks_overhead_analysis</name>
    <tag></tag>
    <UUID>fb3cb642-daaa-48ab-94e2-ba22a1303ae3</UUID>
    <migratedVersion>5.9.0</migratedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
-   <projectFileLocation>/Users/kazuakiurayama/katalon-workspace/ks_PerformanceLargeScaleWebUITest/ks_PerformanceLargeScaleWebUITest.prj</projectFileLocation>
+   <projectFileLocation>/Users/kazuakiurayama/katalon-workspace/ks_overhead_analysis/ks_overhead_analysis.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>

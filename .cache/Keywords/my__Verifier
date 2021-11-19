@@ -1,9 +1,46 @@
 {
-  "keywordFileContentHash": "46721C4E1F6A2AD1519F09A8BDA1580F",
+  "keywordFileContentHash": "EF2749D114079A2AEBBED3CDDBC104A9",
   "keywordClasses": [
     {
       "name": "my.Verifier",
-      "keywordMethods": []
+      "keywordMethods": [
+        {
+          "name": "printID",
+          "parameters": [
+            {
+              "name": "id",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "verifySomething",
+          "parameters": [
+            {
+              "name": "id",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ]
+        }
+      ]
     }
   ],
   "javadocParsed": false
