@@ -1,6 +1,29 @@
-# Analysis of overhead for processing a large data set in Katalon Studio
+# Analysis of the overhead of Log Viewer in Katalon Studio
 
-## Introduction
+## Problem to solve
+
+I have ever made a long running test in Katalon Studio. My test took screenshots of 6000 pages and did image comparison. See [this](https://forum.katalon.com/t/executionprofilesloader/51515). My test ran 17 hours. I thought it too long, too slow.
+
+Also, in the Katalon User Forum, you can find a few posts about long-running test that ran overnights or over-days! ; for example [this](https://forum.katalon.com/t/ks-8-1-0-stucked-in-running-after-more-than-5-days-of-running-long-haul-test-need-help-to-generate-partial-report/59799/64).
+
+The 1st question I had was this: **Why tests in Katalon Studio, in some cases, run so slow? Is there any way how to make it faster?**
+
+
+
+
+## In short, you want to ..
+
+Katalon GUI has a GUI component called "Log Viewer".
+![LogViewer](docs/images/LogViewer.png)
+
+
+
+
+
+
+
+
+
 
 ## Fixtures
 
