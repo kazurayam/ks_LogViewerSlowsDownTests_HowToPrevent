@@ -3,15 +3,17 @@
 
 ## Problem to solve
 
-Katalon Studio's "Log Viewer" slows down test execution siginifantly. It is a fact. Are you aware of it? May be not. So I will explain it here. And I will also explain how to make it better.
+Katalon Studio's "Log Viewer" slows down test execution siginifantly. 
+
+This is a fact. Are you aware of it? Maybe not. So I will explain the result of my investigation here. I will also explain how to make it better.
 
 ## Measurement result
 
-Let me go straight to the point. The following table shows the result I measured how long a Test Suite took to finish running. I used just the same test code, with several variation of the "Log Viewer" setups.
+Let me go straight to the point. The following table shows the result I measured how long a Test Suite took to finish running. I used just the same test code, but with several variation of the "Log Viewer" setups.
 
-| case | Widget is | Mode  | log level | scroll  | duration | scale |
+| case | Widget is | Mode  | log level | scroll  | duration | duration graph |
 | ---: | :-------- | :---- | :---- | ------: | :------------ | :----------------------------------- |
-| 1    | Attached | Tree  | -     | enabled | 5 min 37 secs | `##################################` |
+| 1    | Attached | Tree  | -     | enabled | 5 minutes 37 seconds | `##################################` |
 | 2    | Attached | Tree  | -     | locked | 3 min 25 secs | `#####################` |
 | 3    | Attached | Table | All   | enabled | 3 min  4 secs | `##################` |
 | 4    | Attached | Table | All   | locked  | 1 min 36 secs | `#########` |
@@ -21,7 +23,7 @@ Let me go straight to the point. The following table shows the result I measured
 | 8    | Detached | Tree  | -     | locked  | 4 min 15 secs | `##########################` |
 | 9    | Closed   | Tree  | -     | -       | 25 secs | `###` |
 
-In one case, my test suite took 5 minutes 37 seconds to finish. But In another case, the same code finished just in 25 seconds. Big difference! This proves that the "Log Viewer" may slow down your tests!
+In the case 1, my test suite took 5 minutes 37 seconds to finish. But In the case 9, the same code finished just in 25 seconds. This difference proves that the "Log Viewer" may slow down your tests!
 
 In the following sections, I will explain how I classified "Log Viewer" setups, and how I measured the duration. In other words, you can find ways to make your tests run faster by setting up "Log Viewer" nicely.
 
