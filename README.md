@@ -1,11 +1,9 @@
-# Log Viewer slows down tests in Katalon Studio - how to prevent it?
+# Log Viewer's "Tree mode" slows down your tests. How to prevent it?
 
 
 ## Problem to solve
 
-Katalon Studio's "Log Viewer" slows down test execution siginifantly. 
-
-This is a fact. Are you aware of it? Maybe not. So I will explain the result of my investigation here. I will also explain how to make it better.
+Katalon Studio's "Log Viewer" slows down your test execution siginifantly. Are you aware of this fact? Maybe not. So I will explain the result of my analysis here. Also I will explain how to make it better.
 
 ## Measurement result
 
@@ -25,9 +23,9 @@ Let me go straight to the point. The following table shows the result I measured
 
 In the case 1, my test suite took 5 minutes 37 seconds to finish. But In the case 9, the same code finished just in 25 seconds. This difference proves that the "Log Viewer" slows down your tests!
 
-In the following sections, I will explain how I classified "Log Viewer" setups, and how I measured the duration. In other words, you can find ways to make your tests run faster by setting up "Log Viewer" nicely.
-
 ## Code to run
+
+I made a Test Suite, a Test Case, and a CSV file as a test fixture.
 
 ### Test Suite `TS1`
 
@@ -78,15 +76,20 @@ I used Timer app of my Android mobile device to measure the duration. I started 
 
 ## Log Viewer setup options
 
-...
+I will enumerate options of Log Viewer setups.
 
-### Widget is Attached/Detached/Closed
+### Log Viewer widget can be Attached/Detached/Closed
 
-...
+A Log Viewer widget is usually attached in the Katalon Studio's window.
+
+
+By a right-clicking the name tab, you can detach the Log Viewer widget from the Katalon Studio's winda, as the following image shows. Even if detached, the Log Viewer widget is still alive and in action.
+
+You can close the window of the Log Viewer widget completely. Then Log Viewer disappear. It is not in action any longer.
 
 ### Mode of Log Viewer
 
-...
+There are 2 format in the Log Viewer. Namely, "Tree view" and "Log view".
 
 ### Log Level for Table mode
 
