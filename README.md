@@ -23,7 +23,7 @@ Let me go straight to the point. The following table shows the result I measured
 | 8    | Detached | Tree  | -     | locked  | 4 min 15 secs | `##########################` |
 | 9    | Closed   | Tree  | -     | -       | 25 secs | `###` |
 
-In the case 1, my test suite took 5 minutes 37 seconds to finish. But In the case 9, the same code finished just in 25 seconds. This difference proves that the "Log Viewer" may slow down your tests!
+In the case 1, my test suite took 5 minutes 37 seconds to finish. But In the case 9, the same code finished just in 25 seconds. This difference proves that the "Log Viewer" slows down your tests!
 
 In the following sections, I will explain how I classified "Log Viewer" setups, and how I measured the duration. In other words, you can find ways to make your tests run faster by setting up "Log Viewer" nicely.
 
@@ -102,7 +102,7 @@ I used Timer app of my Android mobile device to measure the duration. I started 
 
 ## Conclusion
 
-Based on the investigation, I would recommend to you as follows.
+Based on the investigation, to let your tests run faster, I would recommend to you as follows.
 
 1. You should not use the Tree mode of the Log Viewer; you should prefer the Table mode.
 2. In the Table mode, you should never select "All" to print, as it emits "step execution logs" which is too volumy.
