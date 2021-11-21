@@ -64,9 +64,9 @@ ID
 #0999
 ```
 
-## How to measure the duration
+## How I measured the duration
 
-When I say "the TS1 took 5 minutes 37 seconds", how do I measure the start and end of duration?
+When I say "the TS1 took 5 minutes 37 seconds", how did I measure the start and end of duration?
 
 As soon as I start the Test Suite `TS1` by clicking the run button ![run button](docs/images/run_katalon_test.png), "Job Progress" modal window will open.
 
@@ -74,4 +74,38 @@ As soon as I start the Test Suite `TS1` by clicking the run button ![run button]
 
 In the "Job Progress" window, I find a moving figure, like `37/1000`. This means, TS1 is going to repeat calling `PrintID` for 1000 times, and it has finished 37 times.
 
-I used Timer app of my Android mobile device to measure the duration. I started the stop watch as soon as I clicked the run button, and wait a while. When the "Job Progress" showd `1000/1000`, I stopped the stop watch. This is the way how I measured the duration of TS1.
+I used Timer app of my Android mobile device to measure the duration. I started the stop watch as soon as I clicked the run button, and wait a while. When the "Job Progress" showed `1000/1000`, I stopped the watch. This is the way how I measured the duration of the `TS1`.
+
+## Log Viewer setup options
+
+...
+
+### Widget is Attached/Detached/Closed
+
+...
+
+### Mode of Log Viewer
+
+...
+
+### Log Level for Table mode
+
+...
+
+### Scroll Lock
+
+...
+
+## How Log Viewer is setup as default
+
+...
+
+## Conclusion
+
+Based on the investigation, I would recommend to you as follows.
+
+1. You should not use the Tree mode of the Log Viewer; you should prefer the Table mode.
+2. In the Table mode, you should never select "All" to print, as it emits "step execution logs" which is too volumy.
+3. In the Table mode, You shoud select "Failure" + "Error" + "Warning" levels to minimize the volume of logs printed. You could add "Info" if you like.
+3. You could detach the Log Viewer widget and entirely close it. Then your tests will run in its maximum speed.
+
