@@ -9,6 +9,8 @@ Katalon Studio's "Log Viewer" slows down your test execution siginifantly. Are y
 
 Let me go straight to the point. The following table shows the result I measured how long a Test Suite took to finish running. I used just the same test code, but with several variation of the "Log Viewer" setups.
 
+As the following table shows, my test suite took 5 minutes 37 seconds to finish in the case 1. But the same code finished in 25 seconds in the case 9. This difference proves that the "Log Viewer" slows down your tests. How how you set up Log Viewer --- it matters significantly to the speed of your tests.
+
 | case | Widget is | Mode  | log level | scroll  | duration | duration graph |
 | ---: | :-------- | :---- | :---- | ------: | :------------ | :----------------------------------- |
 | 1    | Attached | Tree  | -     | enabled | 5 minutes 37 seconds | `##################################` |
@@ -21,7 +23,6 @@ Let me go straight to the point. The following table shows the result I measured
 | 8    | Detached | Tree  | -     | locked  | 4 min 15 secs | `##########################` |
 | 9    | Closed   | Tree  | -     | -       | 25 secs | `###` |
 
-In the case 1, my test suite took 5 minutes 37 seconds to finish. But In the case 9, the same code finished just in 25 seconds. This difference proves that the "Log Viewer" slows down your tests!
 
 ## Code to run
 
@@ -119,13 +120,23 @@ There are 2 format in the Log Viewer. Namely, "Log view" and "Tree view". You ca
 
 ### Log type options
 
-In the Log view, you can select which type of logs to be displayed:
+In the Log view, you can select which type of logs to be displayed: All, Info, Passed, Failed, Error, Warning, Not Run
 
 ![log type options](docs/images/Log_type_options.png)
 
+#### Step Execution Log
+
+![START_END_LOG](docs/images/START_END_Log.png)
+
+
+
 ### Scroll Lock
 
-...
+![Scroll Lock](docs/images/Scroll_Lock.png)
+
+![Log executed test steps](docs/images/Log_executed_test_steps-enabled.png)
+
+![Enterprise license required](docs/images/Enterprise_license_is_required.png)
 
 ## How Log Viewer is setup as default
 
