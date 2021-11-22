@@ -23,7 +23,7 @@ As the following table shows, *in the case 1, my test suite took 5 minutes 37 se
 | 6    | Attached | Table | F+E+W | locked  | 1 min 10 secs | `#######` |
 | 7    | Detached | Tree  | -     | enabled | 5 min 35 secs | `##################################` |
 | 8    | Detached | Tree  | -     | locked  | 4 min 15 secs | `##########################` |
-| 9    | Closed   | Tree  | -     | -       | 25 secs | `###` |
+| 9    | Closed   | -  | -     | -       | 25 secs | `###` |
 
 
 ## Code to run
