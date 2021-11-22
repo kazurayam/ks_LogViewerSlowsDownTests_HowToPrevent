@@ -102,15 +102,26 @@ You can even close the window of the detached Log Viewer widget.
 
 Then Log Viewer has disappeared. It is not in action any longer.
 
-
+If you stop and restart Katalon Studio GUI, the Log Viewer widget will revive.
 
 ### Mode of Log Viewer
 
-There are 2 format in the Log Viewer. Namely, "Tree view" and "Log view".
+There are 2 format in the Log Viewer. Namely, "Log view" and "Tree view". You can choose by toggling the button ![view type toggle](docs/images/view_type_toggle.png)
 
-### Log Level for Table mode
+#### Log view
 
-...
+![logview](docs/images/LogViewer_LogView.png)
+
+
+#### Tree view
+
+![treeview](docs/images/LogViewer_TreeView.png)
+
+### Log type options
+
+In the Log view, you can select which type of logs to be displayed:
+
+![log type options](docs/images/Log_type_options.png)
 
 ### Scroll Lock
 
