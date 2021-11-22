@@ -3,13 +3,13 @@
 
 ## Problem to solve
 
-Katalon Studio's "Log Viewer" slows down your test execution siginifantly. Are you aware of this fact? Maybe not. So I will explain the result of my analysis here. Also I will explain how to make it better.
+Katalon Studio's "Log Viewer" slows down your test execution significantly. Are you aware of this fact? Maybe not. So I will explain the result of my analysis here. Also I will explain how to make it better.
 
 ## Measurement result
 
-Let me go straight to the point. The following table shows the result I measured how long a Test Suite took to finish running. I used just the same test code, but with several variation of the "Log Viewer" setups.
+Let me go straight to the point. The following table shows the result I measured how long a Test Suite took to finish running. I used a single Test Suite while I applied several variation of the "Log Viewer" setups.
 
-As the following table shows, my test suite took 5 minutes 37 seconds to finish in the case 1. But the same code finished in 25 seconds in the case 9. This difference proves that the "Log Viewer" slows down your tests. How how you set up Log Viewer --- it matters significantly to the speed of your tests.
+As the following table shows, *in the case 1, my test suite took 5 minutes 37 seconds to finish. But the same code finished in 25 seconds in the case 9*. This difference proves that the "Log Viewer" slows down your tests. How how you set up Log Viewer --- it matters significantly to the speed of your tests.
 
 | case | Widget is | Mode  | log level | scroll  | duration | duration graph |
 | ---: | :-------- | :---- | :---- | ------: | :------------ | :----------------------------------- |
@@ -89,7 +89,7 @@ Usually a Log Viewer widget is attached in the Katalon Studio's window.
 
 ![attached](docs/images/LogViewer_is_attached.png)
 
-By a right-clicking the name tab, you can detach the Log Viewer widget from the Katalon Studio's window. The following image shows how it looks like. 
+By a right-clicking the name tab, you can detach the Log Viewer widget from the Katalon Studio's window. The following image shows how it looks like.
 
 ![detachable](docs/images/LogViewer_is_detachable.png)
 
@@ -97,7 +97,7 @@ By a right-clicking the name tab, you can detach the Log Viewer widget from the 
 
 Even if detached, the Log Viewer widget is still alive and in action.
 
-You can even close the window of the detached Log Viewer widget. 
+You can even close the window of the detached Log Viewer widget.
 
 ![closed](docs/images/LogViewer_was_closed.png)
 
@@ -111,12 +111,12 @@ There are 2 format in the Log Viewer. Namely, "Log view" and "Tree view". You ca
 
 #### Log view
 
-![logview](docs/images/LogViewer_LogView.png)
+![log view](docs/images/LogViewer_LogView.png)
 
 
 #### Tree view
 
-![treeview](docs/images/LogViewer_TreeView.png)
+![tree view](docs/images/LogViewer_TreeView.png)
 
 ### Log type options
 
@@ -124,30 +124,56 @@ In the Log view, you can select which type of logs to be displayed: All, Info, P
 
 ![log type options](docs/images/Log_type_options.png)
 
-#### Step Execution Log
+### Step Execution Log
+
+If you select "All" in the Log view and run a test, will see quite a lot of "START" and "END" logs are printed.
 
 ![START_END_LOG](docs/images/START_END_Log.png)
 
+If you deselect "All", then no START and END logs are printed.
 
+### Log executed test steps - Enabled/Disabled
 
-### Scroll Lock
+The START and END logs are also called *"step execution logs"*.
 
-![Scroll Lock](docs/images/Scroll_Lock.png)
-
+In the "Project Settings > Execution" dialog, you will find an option: "Log executed test steps":
 ![Log executed test steps](docs/images/Log_executed_test_steps-enabled.png)
+
+If you have a Katalon Studio Enterprise license, you can disable logging START and END.
+
+If you do not have the Enterprise license, you will be advised to purchase it.
 
 ![Enterprise license required](docs/images/Enterprise_license_is_required.png)
 
+### Scroll Lock
+
+Log Viewer widget has a toggle button with "Lock"-like icon, which is labeled "Scroll Lock".
+
+![Scroll Lock](docs/images/Scroll_Lock.png)
+
+If you toggle it ON, the Log Viewer stops automatic scrolling. Even when a test emits thousands of logs, the "Log view" will show only 10 or 20 lines at the top only and stay quite. But the "tree view" will continue vibrating even if it is "Scroll Locked" while a test is running.
+
 ## How Log Viewer is setup as default
 
-...
+When you newly installed Katalon Studio or you have upgrade it to a newer version, the Log Viewer will be automatically re-configured as follows:
+
+- Log Viewer widget is attached into the Katalon Studio window.
+- Log Viewer shows Tree view, rather than Log view, initially
+- In the Log view, "All" level is selected initially
+- The "Scroll Lock" is off initially
+
+## My Considerations
+
+I was surprised to find that Log Viewer slows down my tests as such. I wondered why, how Katalon Studio is implemented internally. I can guess some, but I can not examine my guesses as the KS source code is not open. I would not write what I guessed here.
 
 ## Conclusion
 
-Based on the investigation, to let your tests run faster, I would recommend to you as follows.
+If your test is running quick enough and you are happy with it, forget me! You don't need this.
 
-1. You should not use the Tree mode of the Log Viewer; you should prefer the Table mode.
-2. In the Table mode, you should never select "All" to print, as it emits "step execution logs" which is too volumy.
-3. In the Table mode, You shoud select "Failure" + "Error" + "Warning" levels to minimize the volume of logs printed. You could add "Info" if you like.
-3. You could detach the Log Viewer widget and entirely close it. Then your tests will run in its maximum speed.
+Based on the investigation, to make your tests run faster, I would advise to you as follows.
+
+1. You should not use the Tree view of the Log Viewer as it makes your test run slow; you should prefer the Log view .
+2. In the Log view, you should never select the "All" level to print, as it emits bulky and useless "step execution logs".
+3. In the Log view, You should select levels you need: "Failure" + "Error" + "Warning". This will reduce the volume of logs to be printed. You can add "Info" if you like.
+4. You could detach the Log Viewer widget and entirely close it. Then your tests will run in its maximum speed.
 
