@@ -36,20 +36,24 @@ I made a Test Suite `TS1`, which applies "A. Execution from test suites" as desc
 ![TS1](docs/images/TS1.png)
 
 ### Test Case `printID`
+
 I made a Test Case [`Test Case/printID`](Scripts/printID/Script1637309731921.groovy), which is minimal:
+
 ```
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 WebUI.comment("ID=${ID}")
 ```
-The Test Case `printID` declares a variable `ID` as:
-![printID_variable](docs/images/printID_variable.png)
+
+This `printID` declares a variable `ID` as:
+![printID_variable](docs/images/printID_variable.png), which would be populated by `TS1` with data from `data.csv` file as follows.
 
 
 ### `data.csv` file
 
 I made a CSV file. It contains 1000 lines. My test reads this, iterate all rows, find the value of `ID` variable which is passed to test case.
 [data.csv](./data.csv)
+
 ```
 ID
 #0000
@@ -64,7 +68,7 @@ ID
 
 ## How I measured the duration
 
-When I say "the TS1 took 5 minutes 37 seconds", how did I measure the start and end of duration?
+When I say "the TS1 took 5 minutes 37 seconds", how did I measure when it started and when it ended?
 
 As soon as I start the Test Suite `TS1` by clicking the run button ![run button](docs/images/run_katalon_test.png), "Job Progress" modal window will open.
 
@@ -72,20 +76,33 @@ As soon as I start the Test Suite `TS1` by clicking the run button ![run button]
 
 In the "Job Progress" window, I find a moving figure, like `37/1000`. This means, TS1 is going to repeat calling `PrintID` for 1000 times, and it has finished 37 times.
 
-I used Timer app of my Android mobile device to measure the duration. I started the stop watch as soon as I clicked the run button, and wait a while. When the "Job Progress" showed `1000/1000`, I stopped the watch. This is the way how I measured the duration of the `TS1`.
+I used a *Timer* app on my Android mobile phone to measure the duration. I started the stop watch as soon as I clicked the run button, and wait a while. When the "Job Progress" showed `1000/1000`, I stopped the watch. This is the way how I measured the duration of the `TS1`.
 
 ## Log Viewer setup options
 
-I will enumerate options of Log Viewer setups.
+Here I will enumerate the options of Log Viewer setups.
 
 ### Log Viewer widget can be Attached/Detached/Closed
 
-A Log Viewer widget is usually attached in the Katalon Studio's window.
+Usually a Log Viewer widget is attached in the Katalon Studio's window.
+
+![attached](docs/images/LogViewer_is_attached.png)
+
+By a right-clicking the name tab, you can detach the Log Viewer widget from the Katalon Studio's window. The following image shows how it looks like. 
+
+![detachable](docs/images/LogViewer_is_detachable.png)
+
+![detached](docs/images/LogViewer_is_detached.png)
+
+Even if detached, the Log Viewer widget is still alive and in action.
+
+You can even close the window of the detached Log Viewer widget. 
+
+![closed](docs/images/LogViewer_was_closed.png)
+
+Then Log Viewer has disappeared. It is not in action any longer.
 
 
-By a right-clicking the name tab, you can detach the Log Viewer widget from the Katalon Studio's winda, as the following image shows. Even if detached, the Log Viewer widget is still alive and in action.
-
-You can close the window of the Log Viewer widget completely. Then Log Viewer disappear. It is not in action any longer.
 
 ### Mode of Log Viewer
 
