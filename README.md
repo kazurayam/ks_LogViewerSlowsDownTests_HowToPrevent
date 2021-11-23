@@ -171,6 +171,38 @@ When you newly installed Katalon Studio or you have upgrade it to a newer versio
 
 I believe that most of the Katalon Studio users are using it with this Log Viewer setups unchanged. This means, you are running your tests as the slowest "case1".
 
+## How much memory is used? how much CPU is occupied?
+
+When I execute the Test Suite `TS1`, how much memory is used? how much CPU is occupied? I wanted to examine this.
+
+I used a profiling tool [VisualVM](https://visualvm.github.io/) and had a look.
+
+The conditions are:
+
+- Machine: MacBook Air (Retina, 13-inch, 2018)
+- Processor: 1.6 GHz Intel Core i5
+- Physical memory: 16 GB
+- OS: macOS Monterey v12.0.1
+- Katalon Studio: v8.2.0
+- JVM arguments in the `katalon.ini` :
+  - XX:+UseG1GC
+  - XX:+UseStringDeduplication
+  - Xms256m
+  - Dfile.encoding=utf-8
+  - Xmx2048m
+- VisualVM versioin2.1.1
+
+![memory](docs/images/memory_usage_by_LogViewer.png) 
+
+Let me enumerate what I observed.
+
+1. The Heap size stayed under 821 MB.
+2. The size of used heap moved in the range of 240 MB - 700 MB. The Garbage Collection mechanism was working properly. The heap used by Katalon Studio's Log Viewer is well managed.
+3. The CPU usage went in the rage of 15 % - 30 %. It seemed it would not blow up to 100 %.
+
+Even if the `TS1` repeated calling the `printID` for 5000 times, 16000 times or more, I suppose CPU and memory usage by `TS1` will be the same. I think it would be fair to say that Log Viewer is not guilty for memory usage.
+
+
 ## My Considerations
 
 I was surprised to find that Log Viewer slows down my tests as such. I wondered how Katalon Studio is implemented internally. I have some guess. But I can not examine it because the KS source code is not open. So I shouldn't write my guesses here.
