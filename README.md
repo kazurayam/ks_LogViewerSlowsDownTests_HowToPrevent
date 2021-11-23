@@ -158,7 +158,7 @@ Log Viewer widget has a toggle button with "Lock"-like icon, which is labeled "S
 
 ![Scroll Lock](docs/images/Scroll_Lock.png)
 
-If you toggle it ON, the Log Viewer stops automatic scrolling. Even when a test emits thousands of logs, the "Log view" will show only 10 or 20 lines at the top only and stay quiet. But the "tree view" will continue vibrating even if it is "Scroll Locked" while a test is running.
+If you toggle it ON, the Log Viewer stops automatic scrolling. Even when a test emits thousands of logs, the "Log view" will show only 10 or 20 lines at the top only and stay quiet. But the "tree view" will continue trembling even if it is "Scroll Locked" while a test is running.
 
 ## How is "Log Viewer" setup initially
 
