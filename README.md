@@ -191,6 +191,7 @@ The conditions are:
   - Dfile.encoding=utf-8
   - Xmx2048m
 - VisualVM versioin2.1.1
+- run the `TS1` with "case 1" settings of Log Viewer
 
 ![memory](docs/images/memory_usage_by_LogViewer.png) 
 
