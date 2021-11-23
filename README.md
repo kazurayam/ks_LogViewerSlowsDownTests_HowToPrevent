@@ -224,3 +224,25 @@ In order to make your tests run faster, I would advise you to follow this:
 
 4. You could detach the Log Viewer widget and close it. Then your tests will run at the highest speed.
 
+## Appendix:
+
+### Time lag
+
+A small surprise for you.
+
+Test Suite `TS1` finishes processing data far earlier than the Job Progress modal shows `1000/1000` = the Log Viewer has flushed all logs.
+
+I have done an experiment. In Katalon Studio v8.2.0, I opened both the Console widget and the Log Viewer widget. The Log Viewer is configured to show Tree view.
+
+![Console_LogViewer](docs/images/Console_LogViewer.png)
+
+I measured how long the `TS1` takes to finish. The result was interesting one:
+
+| Widget     | duration | duration graph |
+| :--------- | :----------- | :-------------------------- |
+| In Console | 4 min 5 sec  | `#########################` |
+| In Log Viewer |6 min 10 sec | `#####################################` |
+
+After 4 minutes 5 seconds, `TS1` finished processing all data entries. At that time, the Job Progress monitor showed `736/1000`, this there remains 246 entries to process, which is simply wrong.
+
+We can guess what's going on. The Log Viewer was too busy to display the raging stream of logs.
