@@ -230,7 +230,7 @@ In order to make your tests run faster, I would advise you to follow this:
 
 I will give you one more surprise to you.
 
-Test Suite `TS1` actually finishes processing data far earlier than the Log Viewer has flushed all logs.
+Test Suite `TS1` actually finishes processing data far earlier before the Log Viewer has flushed all logs.
 
 I have done an experiment. In Katalon Studio v8.2.0, I opened both the Console widget and the Log Viewer widget. The Log Viewer is configured to show Tree view.
 
