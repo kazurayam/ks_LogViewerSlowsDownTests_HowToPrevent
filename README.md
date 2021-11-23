@@ -228,9 +228,9 @@ In order to make your tests run faster, I would advise you to follow this:
 
 ### Time lag
 
-A small surprise for you.
+I will give you one more surprise to you.
 
-Test Suite `TS1` finishes processing data far earlier than the Job Progress modal shows `1000/1000` = the Log Viewer has flushed all logs.
+Test Suite `TS1` actually finishes processing data far earlier than the Log Viewer has flushed all logs.
 
 I have done an experiment. In Katalon Studio v8.2.0, I opened both the Console widget and the Log Viewer widget. The Log Viewer is configured to show Tree view.
 
@@ -245,4 +245,4 @@ I measured how long the `TS1` takes to finish. The result was interesting one:
 
 After 4 minutes 5 seconds, `TS1` finished processing all data entries. At that time, the Job Progress monitor showed `736/1000`, this there remains 246 entries to process, which is simply wrong.
 
-We can guess what's going on. The Log Viewer was too busy to display the raging stream of logs.
+Obviously, the Log Viewer is too slow to display the raging stream of logs.
