@@ -199,6 +199,7 @@ Let me enumerate what I observed.
 1. The Heap size stayed under 821 MB.
 2. The size of used heap moved in the range of 240 MB - 700 MB. The Garbage Collection mechanism was working properly. The heap used by Katalon Studio's Log Viewer is well managed.
 3. The CPU usage went in the rage of 15 % - 30 %. It seemed it would not blow up to 100 %.
+4. I think that asking 30% of CPU for logging is too much. The resource foot print for logging must be minimum.
 
 Even if the `TS1` repeated calling the `printID` for 5000 times, 16000 times or more, I suppose CPU and memory usage by `TS1` will be the same. I think it would be fair to say that Log Viewer is not guilty for memory usage.
 
