@@ -212,7 +212,7 @@ I was surprised to find that Log Viewer slows down my tests as such. I wondered 
 
 ## Conclusion
 
-If your test is running quick enough now and if you are happy with it, forget me! You don't need this.
+If your test is running quick enough now and if you are happy with it, forget me! You don't need my advise.
 
 In order to make your tests run faster, I would advise you to follow this:
 
