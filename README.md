@@ -243,6 +243,6 @@ I measured how long the `TS1` takes to finish. The result was interesting one:
 | In Console | 4 min 5 sec  | `#########################` |
 | In Log Viewer |6 min 10 sec | `#####################################` |
 
-After 4 minutes 5 seconds, `TS1` finished processing all data entries. At that time, the Job Progress monitor showed `736/1000`, this there remains 246 entries to process, which is simply wrong.
+After 4 minutes 5 seconds, `TS1` finished processing all data entries. At that time, the Job Progress monitor showed `736/1000`. It was imply wrong information.
 
 Obviously, the Log Viewer is too slow to display the raging stream of logs.
