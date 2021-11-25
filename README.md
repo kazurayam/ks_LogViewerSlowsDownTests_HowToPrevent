@@ -215,10 +215,6 @@ Even if the `TS1` repeated calling the `printID` for 5000 times, 16000 times or 
 I tried the case 9 (Log Viewer is detached & closed) with VisualVM. I saw that CPU usage went in the range of 15 % - 30 %, but the test finished far quicker. 
 
 
-## My Considerations
-
-I was surprised to find that Log Viewer slows down my tests as such. I wondered how Katalon Studio is implemented internally. I have some guess. But I can not examine it because the KS source code is not open. So I shouldn't write my guesses here.
-
 ## Conclusion
 
 If your test is running quick enough now and if you are happy with it, forget me! You don't need my advise.
@@ -232,6 +228,8 @@ In order to make your tests run faster, I would advise you to follow this:
 3. In the Log view, You should select levels you need: e.g, "Failure" + "Error" + "Warning". This will reduce the volume of logs to be printed. You can add "Info" if you like.
 
 4. You could detach the Log Viewer widget and close it. Then your tests will run at the highest speed.
+
+5. If you have a Enterprise license, you should set the "Log executed test steps" disabled.
 
 ## Appendix:
 
