@@ -274,6 +274,7 @@ for (int i in 0..10) {
 	WebUI.comment("ID=${ID}")
 }
 ```
+With this loop, this test case will emit 10 times more of START + END logs into the Log Viewer.
 
 I examined 3 cases where
 - caseY1 : Execute TS2, with "Log executed test steps" option Enabled, with the Log Viewer is attached 
