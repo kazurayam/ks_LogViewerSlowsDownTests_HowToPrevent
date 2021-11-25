@@ -289,4 +289,6 @@ The following is the result.
 
 Impressive, isn't it?
 
-I think it is ridiculous waiting such long time for the Log Viewer to display the superfluous “START” & “END” logs.
+It is ridiculous to wait such a long time for the Log Viewer to display the superfluous "START" & "END" logs.
+
+Many Katalon Studio users are running long-haul tests (hours, days ...). Now I will tell you; your test would be similar to the case Y1. Now you know how to improve.
