@@ -13,17 +13,26 @@ Let me go straight to the point. The following table shows the result I measured
 
 As the following table shows, *in the case 1, my test suite took 5 minutes 37 seconds to finish. But the same code finished in 25 seconds in the case 9*. This difference proves that the "Log Viewer" slows down your tests. How you set up Log Viewer --- it matters significantly to the speed of your tests.
 
-| case | Widget is | Mode  | log level | scroll  | duration | duration graph |
-| ---: | :-------- | :---- | :---- | ------: | :------------ | :----------------------------------- |
-| 1    | Attached | Tree  | -     | enabled | 5 minutes 37 seconds | `##################################` |
-| 2    | Attached | Tree  | -     | locked | 3 min 25 secs | `#####################` |
-| 3    | Attached | Table | All   | enabled | 3 min  4 secs | `##################` |
-| 4    | Attached | Table | All   | locked  | 1 min 36 secs | `#########` |
-| 5    | Attached | Table | F+E+W | enabled | 56 secs | `######` |
-| 6    | Attached | Table | F+E+W | locked  | 1 min 10 secs | `#######` |
-| 7    | Detached | Tree  | -     | enabled | 5 min 35 secs | `##################################` |
-| 8    | Detached | Tree  | -     | locked  | 4 min 15 secs | `##########################` |
-| 9    | Closed   | -  | -     | -       | 25 secs | `###` |
+| Case | log executed test steps | Widget is | Mode  | log level | scroll  | duration | duration graph |
+| ---: | :------- | :-------- | :---- | :-------- | :------ | ------------: | :----------------------------------- |
+| 1    | Enabled  | Attached | Tree  | -     | enabled | 5 minutes 37 seconds | `##################################` |
+| 2    | Enabled  | Attached | Tree  | -     | locked | 3 m 25 s | `#####################` |
+| 3    | Enabled  | Attached | Table | All   | enabled | 3 m  4 s | `##################` |
+| 4    | Enabled  | Attached | Table | All   | locked  | 1 m 36 s | `#########` |
+| 5    | Enabled  | Attached | Table | F+E+W | enabled | 56 s | `######` |
+| 6    | Enabled  | Attached | Table | F+E+W | locked  | 1 m 10 s | `#######` |
+| 7    | Enabled  | Detached | Tree  | -     | enabled | 5 m 35 s | `##################################` |
+| 8    | Enabled  | Detached | Tree  | -     | locked  | 4 m 15 s | `##########################` |
+| 9    | Enabled  | Closed   | -     | -     | -       | 25 s | `###` |
+| X1   | Disabled | Attached | Tree  | -     | enabled | 3 m 53 s | `#######################` |
+| X2   | Disabled | Attached | Tree  | -     | locked  | 3 m  2 s | `##################` |
+| X3   | Disabled | Attached | Table | All   | enabled | 2 m 33 s | `###############` |
+| X4   | Disabled | Attached | Table | All   | locked  | 1 m 41 s | `##########` |
+| X5   | Disabled | Attached | Table | F+E+W | enabled | 2 m  9 s | `#############` |
+| X6   | Disabled | Attached | Table | F+E+W | locked  | 1 m 59 s | `############` |
+| X7   | Disabled | Detached | Tree  | -     | enabled | 5 m  3 s | `##############################` |
+| X8   | Disabled | Detached | Tree  | -     | locked  | 4 m  3 s | `########################` |
+| X9   | Disabled | Closed   | -     | -     | -       | 25 s | `###` |
 
 
 ## Code to run
