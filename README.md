@@ -289,3 +289,5 @@ The following is the result.
 | Y3 | TS2 | Disabled | Closed   | -    |  0 min 43 secs | #### |
 
 Impressive, isn't it?
+
+I think it is ridiculous waiting such long time for the Log Viewer to display the superfluous “START” & “END” logs.
