@@ -255,3 +255,37 @@ I measured how long the `TS1` takes to finish. The result was interesting one:
 After 4 minutes 5 seconds, `TS1` finished processing all data entries. At that time, the Job Progress monitor showed `736/1000`. It was imply wrong information.
 
 Obviously, the Log Viewer is too slow to display the raging stream of logs.
+
+
+### "Logging executed test steps" matters
+
+The Test Case `printID`, which is called by the Test Suite `TS1` is minimalistic. It has only one line of:
+```
+WebUI.comment("ID=${ID}")
+```
+When called, `printID` emits just a few *step execution logs* like,
+
+![START_END](docs/images/START_END_Log.png)
+
+I added another Test Case [`printID_manytimes`](Scripts/printID_manytimes/Script1637826095527.groovy), which is called by another Test Suite `TS2`. The test case has a loop of calling a keyword 10 times.
+
+```
+for (int i in 0..10) {
+	WebUI.comment("ID=${ID}")
+}
+```
+
+I examined 3 cases where
+- caseY1 : Execute TS2, with "Log executed test steps" option Enabled, with the Log Viewer is attached 
+- caseY2 : Execute TS2, with "Log executed test steps" option Disabled, with the Log Viewer is attached
+- caseY3 : Execute TS2, with "Log executed test steps" option Disabled, with the Log Viewer is closed
+
+The following is the result.
+
+| Suite| Step Execution Log |Log Viewer|Mode|duration| duration graph |
+| :-- | :------- | :------- |:---- | :------------- | :------- |
+| TS2 | Enabled  | Attached | Tree | 25 min 17 secs | #########+#########+#########+#########+#########+#########+#########+#########+#########+#########1#########+#########+#########+#########+#########+#########+#########+#########+#########+#########2#########+#########+#########+#########+#########+#########+#########+#########+#########+#########3#########+#########+#########+#########+#########+#########+#########+#########+#########+#########4#########+#########+#########+#########+#########+#########+#########+#########+#########+#########5#########+#########+#########+#########+#########+#########+#########+#########+#########+#########6#########+#########+#########+#########+#########+#########+#########+#########+#########+#########7#########+#########+#########+#########+#########+#########+#########+#########+#########+#########8#########+#########+#########+#########+#########+#########+#########+#########+#########+#########9#########+#########+#########+#########+#########+#########+#########+#########+#########+#########0#########+#########+#########+#########+#########+#########+#########+#########+#########+#########1#########+#########+#########+#########+#########+#########+#########+#########+#########+#########2#########+#########+#########+#########+#########+#########+#########+#########+#########+#########3#########+#########+#########+#########+#########+#########+#########+#########+#########+#########4#########+#########+#########+#########+#########+#########+#########+#########+#########+#########5##|
+| TS2 | Disabled | Attached | Tree |  6 min 11 secs | #########+#########+#########+#######|
+| TS2 | Disabled | Closed   | -    |  0 min 43 secs | #### |
+
+This is impressive, isn't it?
