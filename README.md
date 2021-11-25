@@ -259,7 +259,7 @@ Obviously, the Log Viewer is too slow to display the raging stream of logs.
 
 ### "Logging executed test steps" matters
 
-The Test Case `printID`, which is called by the Test Suite `TS1` is minimalistic. It has only one line of:
+The Test Case `printID`, which is called by the Test Suite `TS1`, is minimal. It has only one line:
 ```
 WebUI.comment("ID=${ID}")
 ```
@@ -288,4 +288,4 @@ The following is the result.
 | Y2 | TS2 | Disabled | Attached | Tree |  6 min 11 secs | #########+#########+#########+#######|
 | Y3 | TS2 | Disabled | Closed   | -    |  0 min 43 secs | #### |
 
-Impressive result, isn't it?
+Impressive, isn't it?
