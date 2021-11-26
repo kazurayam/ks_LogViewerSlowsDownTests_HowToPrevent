@@ -295,9 +295,9 @@ Many Katalon Studio users are running long-haul tests (hours, days ...). Now I w
 
 ### Test that uses Custom Keyword runs faster
 
-As you see in the above section, the Test Suite `T2` in the case Y1 took over 25 minutes whereas the same `T2` in the case Y2 took only 6 minutes. Why such difference? It depends if "Log executed test steps" option is Enabled or Disabled. If you have an Enterprise license, you can disable the option to enjoy faster test run. But if you don't, you can not disable it. *Is there any other way to make you test quicker?* as a test in 25 minutes is unbearable.
+As you see in the above section, the Test Suite `T2` in the case Y1 took over 25 minutes whereas the same `T2` in the case Y2 took only 6 minutes. Why such a difference? It depends on if the "Log executed test steps" option is Enabled or Disabled. If you have an Enterprise license, you can disable the option and enjoy a faster test run. But if you don't, you can not disable it. *Is there any other way to make you test run faster in the Free version?*.
 
-Yes, there is one. You can rewrite your Test Case script to be a combination of a Custom Keyword and a short Test Case script that calls the Custom Keyword. Then the test will run quicker.
+Yes, there is a way. You can rewrite your Test Case script so that you make a combination of a Custom Keyword and a short Test Case that just calls the Custom Keyword. Then the test will run faster.
 
 Let me tell you what I examined.
 
