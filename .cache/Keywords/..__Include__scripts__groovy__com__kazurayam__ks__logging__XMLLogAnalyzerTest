@@ -1,0 +1,14 @@
+{
+  "keywordFileContentHash": "325B07D3BD53C42A8ED5CED28B7FF8DA",
+  "keywordClasses": [
+    {
+      "name": "com.kazurayam.ks.logging.XMLLogAnalyzerTest",
+      "keywordMethods": []
+    },
+    {
+      "name": "com.kazurayam.ks.logging.XMLLogAnalyzerTest$1",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": false
+}

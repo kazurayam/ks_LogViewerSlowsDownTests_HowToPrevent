@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>printID_manytimes_usingKeyword</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>122033b8-3935-45f9-b33f-ee36ff13d30c</testCaseGuid>
+   <variable>
+      <defaultValue>'foo'</defaultValue>
+      <description></description>
+      <id>faf1fefe-facc-4588-b9d1-e6286e4cf928</id>
+      <masked>false</masked>
+      <name>ID</name>
+   </variable>
+</TestCaseEntity>

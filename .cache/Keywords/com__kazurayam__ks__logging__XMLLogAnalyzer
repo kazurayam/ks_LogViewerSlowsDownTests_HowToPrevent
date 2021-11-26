@@ -1,0 +1,14 @@
+{
+  "keywordFileContentHash": "CA7E48F26BD5BBF093BB200BC33EB4EA",
+  "keywordClasses": [
+    {
+      "name": "com.kazurayam.ks.logging.XMLLogAnalyzer",
+      "keywordMethods": []
+    },
+    {
+      "name": "com.kazurayam.ks.logging.XMLLogAnalyzer$Format",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}
