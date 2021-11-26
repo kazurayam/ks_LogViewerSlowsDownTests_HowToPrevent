@@ -227,9 +227,9 @@ In order to make your tests run faster, I would advise you to follow this:
 
 3. In the Log view, You should select levels you need: e.g, "Failure" + "Error" + "Warning". This will reduce the volume of logs to be printed. You can add "Info" if you like.
 
-4. You could detach the Log Viewer widget and close it. Then your tests will run at the highest speed.
+4. If you have a Enterprise license, you should set the "Log executed test steps" disabled.
 
-5. If you have a Enterprise license, you should set the "Log executed test steps" disabled.
+5. You could detach the Log Viewer widget and close it. Then your tests will run at the highest speed.
 
 ## Appendix:
 
