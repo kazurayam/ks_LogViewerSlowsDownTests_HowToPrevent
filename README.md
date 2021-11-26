@@ -346,6 +346,6 @@ Why the Test Suite `TS3` can runs faster than `TS2`?
 
 If you look at the Log view with All level selected while you ran `TS3`, you will see no verbose `Start action :` and `End action :` logs appearing. It is because that *Katalon Studio does not log executed test steps within a Custom Keyword*.
 
-[TS3 doesn't log executed test steps](docs/images/TS3_doesnt_log_executed_test_steps.png)
+![TS3 doesn't log executed test steps](docs/images/TS3_doesnt_log_executed_test_steps.png)
 
  The Test Suite `TS3` will run the same both in the Enterprise version and the Free version.
