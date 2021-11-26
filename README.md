@@ -293,11 +293,11 @@ It is ridiculous to wait such a long time for the Log Viewer to display the supe
 
 Many Katalon Studio users are running long-haul tests (hours, days ...). Now I will tell you; your test is the same as the case Y1. Now you know how to improve.
 
-### Test that uses Custom Keyword runs faster
+### Test with Custom Keyword runs faster
 
 As you see in the above section, the Test Suite `T2` in the case Y1 took over 25 minutes whereas the same `T2` in the case Y2 took only 6 minutes. Why such a difference? It depends on if the "Log executed test steps" option is Enabled or Disabled. If you have an Enterprise license, you can disable the option and enjoy a faster test run. But if you don't, you can not disable it. *Is there any other way to make you test run faster in the Free version?*.
 
-Yes, there is a way. You can rewrite your Test Case script so that you make a combination of a Custom Keyword and a short Test Case that just calls the Custom Keyword. Then the test will run faster.
+Yes, there is a way. You can rewrite your Test Case script so that you make a combination of a Custom Keyword and a short Test Case that just calls the Custom Keyword. Your Test Case will delegate the Custom Keyword to perform concrete test processing.
 
 Let me tell you what I examined.
 
@@ -321,7 +321,7 @@ public class Util {
 }
 ```
 
-Please note that this Keyword does just the same as what the Test Case `printID_manytimes` does.
+Please note that the Keyword `printID10times()` does just the same as what the Test Case `printID_manytimes` does in the `TS2`.
 
 I made a new Test Case [`Test Cases/printID_manytimes_usingKeyword`](Scripts/printID_manytimes_usingKeyword/Script1637885416925.groovy). This just invokes the Custom Keyword passing parameter values.
 
@@ -329,9 +329,9 @@ I made a new Test Case [`Test Cases/printID_manytimes_usingKeyword`](Scripts/pri
 CustomKeywords.'my.Util.printID10times'(ID)
 ```
 
-I made a new Test Suite `TS3` which calls the Test Case `printID_manytimes_usingKeyword` 1000 times while passing data from a CSV file.
+I made a new Test Suite `TS3` which calls the Test Case `printID_manytimes_usingKeyword` for 1000 times while passing data from a CSV file.
 
-The following table shows the measurement result. Please remark the case **Y4** result.
+The following table shows the measurement result. Please find the case **Y4** result.
 
 | case |  Suite| Step Execution Log |Log Viewer|Mode|duration| duration graph |
 | :--- | :-- | :------- | :------- |:---- | :------------- | :------- |
@@ -340,11 +340,11 @@ The following table shows the measurement result. Please remark the case **Y4** 
 | Y3 | TS2 | Disabled | Closed   | -    |  0 min 43 secs | #### |
 | Y4 | **TS3** | **Enabled**  | Attached | Tree |  9 min 30 secs | #########+#########+#########+#########+#########+####### |
 
-In the case Y4, `TS3` ran in 9 minutes. It is not as fast as the case Y2 (`TS2` in 6 minutes), but it is much better than the case Y1 (`TS2` in 25 minutes).
+In the case Y4, `TS3` ran in 9 minutes. It is not as fast as the case Y2 (`TS2` in 6 minutes), but is much better than the case Y1 (`TS2` in 25 minutes).
 
-Why the Test Suite `TS3` can runs faster than `TS2`? 
+Why the case Y4 ran faster than the case Y1?
 
-If you look at the Log view with All level selected while you ran `TS3`, you will see no verbose `Start action :` and `End action :` logs appearing. It is because that *Katalon Studio does not log executed test steps within a Custom Keyword*.
+It is because that *Katalon Studio does not log executed test steps within a Custom Keyword*. If you look at the Log view with "All" level selected while you ran `TS3`, you will see no verbose `Start action :` and `End action :` logs appearing. This makes the case `Y4` light-weighted.
 
 ![TS3 doesn't log executed test steps](docs/images/TS3_doesnt_log_executed_test_steps.png)
 
